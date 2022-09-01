@@ -81,8 +81,12 @@ function generatePassword () {
   var generatedPassByUser = ""
 
   for (var i = 0; i < userSelect.length; i++) {
-    userSelect[i] = 
+    var word = [ Math.round(Math.random() * userPassLength)];
+    generatedPassByUser = userSelect + userPassLength[word] 
   }
+  console.log(generatedPassByUser)
+  return generatedPassByUser
+  
 
 
 

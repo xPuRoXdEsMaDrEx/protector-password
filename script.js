@@ -23,9 +23,6 @@ console.info("This is a random password generator uses between 8 and 128 charact
 // 
 
 
-var generateBtn = document.querySelector("#generate");
-
-
 function generatePassword () {
 
   var lowercase = [ "a","b","c","d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -33,56 +30,58 @@ function generatePassword () {
   var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "~", "?", "<", ">", "=", "+", ".", ",", "/", "|"];
   var userSelect = [];
-  var defaultSelect = [];
+
+  console.log(userSelect)
+  console.log(defaultSelect)
 
   var userLengthPass = window.prompt('Select a password length from 8 to 128 characters only!');
-  console.log(userLengthPass)
+  // console.log(userLengthPass)
   // value from window.prompt that was entered is used in the following statement
   if  (userLengthPass < 8 || userLengthPass > 128) {
-    return 'That is a terrible choice';
-  } else if (isNaN(userLengthPass)) {
+    return
+  } if (isNaN(userLengthPass)) {
     return window.alert('Please try again and make a valid choice from 8 to 128 characters only!🤬');
-  } else {
-    window.alert('Your password length will be ' + userLengthPass + ' character long.');
-  } 
+  } else {}
     
   var userAddLowercase = window.confirm('Would you like to have lowercase letters in your password?');
   console.log(userAddLowercase)
-  // The value from window.confirm that is returned is used to validate the statement below
-  
-  
-  // if (userAddLowercase === true) {
-  //   return window.alert('You have choosen to use lowercase letters in your password.');
-  // } else {
-  //   window.alert('You have choosen NOT to use lowercase letters in your password.');
-  // }
+
+  if (userAddLowercase === true) {
+    userSelect.push(lowercase)
+  } 
   
   var userAddUppercase = window.confirm('Would you like to have UPPERCASE letters used in your password?');
   console.log(userAddUppercase)
   
   if (userAddUppercase === true) {
-    return window.alert('You have choosen to use UPPERCASE letters in your password');
-  } else {
-    window.alert('You have choosen NOT to use UPPERCASE letters in your password');
+    userSelect.push(uppercase)
   }
 
   var userAddNumeric = window.confirm('Would you like to have numeric characters in your password?');
   console.log(userAddNumeric)
   
   if (userAddNumeric === true) {
-    return window.alert('You have choosen to use numeric characters in your password');
-  } else {
-    window.alert('You have choosen NOT to use numberic characters in your password');
+    userSelect.push(numeric)
   }
 
   var userAddSpecial = window.confirm('Would you like to have special characters in your password?');
   console.log(userAddSpecial)
   
   if (userAddSpecial === true) {
-    return window.alert('You have choosen to use special characters in your password');
-  } else {
-    window.alert('You have choosen NOT to use special characters in your password');
+    userSelect.push(special)
   }
+  
+  var defaultSelect = window.alert('Your password will be displayed shortly below.');
+  console.log(defaultSelect)
+
+  if (userAddLowercase === false && userAddUppercase === false && userAddNumeric === false && userAddSpecial === false) {
+   userSelect.push(lowercase + uppercase + numeric + special)
+  }
+
+  
+
+
+
 
 
 
@@ -92,7 +91,7 @@ function generatePassword () {
 }
 
 // Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {

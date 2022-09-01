@@ -34,55 +34,55 @@ function generatePassword () {
   console.log(userSelect)
   console.log(defaultSelect)
 
-  var userLengthPass = window.prompt('Select a password length from 8 to 128 characters only!');
-  // console.log(userLengthPass)
+  var userPassLength = window.prompt('Select a password length from 8 to 128 characters only!');
+  // console.log(userPassLength)
   // value from window.prompt that was entered is used in the following statement
-  if  (userLengthPass < 8 || userLengthPass > 128) {
+  if  (userPassLength < 8 || userPassLength > 128) {
     return
-  } if (isNaN(userLengthPass)) {
+  } if (isNaN(userPassLength)) {
     return window.alert('Please try again and make a valid choice from 8 to 128 characters only!🤬');
   } else {}
     
   var userAddLowercase = window.confirm('Would you like to have lowercase letters in your password?');
-  console.log(userAddLowercase)
+  // console.log(userAddLowercase)
 
   if (userAddLowercase === true) {
     userSelect.push(lowercase)
   } 
   
   var userAddUppercase = window.confirm('Would you like to have UPPERCASE letters used in your password?');
-  console.log(userAddUppercase)
+  // console.log(userAddUppercase)
   
   if (userAddUppercase === true) {
     userSelect.push(uppercase)
   }
 
   var userAddNumeric = window.confirm('Would you like to have numeric characters in your password?');
-  console.log(userAddNumeric)
+  // console.log(userAddNumeric)
   
   if (userAddNumeric === true) {
     userSelect.push(numeric)
   }
 
   var userAddSpecial = window.confirm('Would you like to have special characters in your password?');
-  console.log(userAddSpecial)
+  // console.log(userAddSpecial)
   
   if (userAddSpecial === true) {
     userSelect.push(special)
   }
   
   var defaultSelect = window.alert('Your password will be displayed shortly below.');
-  console.log(defaultSelect)
+  // console.log(defaultSelect)
 
   if (userAddLowercase === false && userAddUppercase === false && userAddNumeric === false && userAddSpecial === false) {
    userSelect.push(lowercase + uppercase + numeric + special)
   }
 
-  
+  var generatedPassByUser = ""
 
-
-
-
+  for (var i = 0; i < userSelect.length; i++) {
+    userSelect[i] = 
+  }
 
 
 

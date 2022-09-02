@@ -18,7 +18,7 @@ Screenshot is just for referance purposes ONLY!
 
 ## Deployed Site
 
-- 
+- https://xpuroxdesmadrex.github.io/protector-password/
 
 ## GitHub Link
 
@@ -30,8 +30,10 @@ Screenshot is just for referance purposes ONLY!
 - https://www.w3schools.com/jsref/jsref_reference.asp
 - https://www.w3schools.com/jsrEF/default.asp
 - https://www.w3schools.com/jsref/jsref_function.asp
+- https://www.w3schools.com/js/js_function_parameters.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
 - https://jschallenger.com/
-- Class repo 
+- Class repo & the learning assistants on AskBCS for the slack app
 
 ## License
 
